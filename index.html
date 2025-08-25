@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Criptografia Simples</title>
+
+  <!-- Carregar bibliotecas direto aqui -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jsencrypt@3.0.0-rc.1/bin/jsencrypt.min.js"></script>
+
+  <style>
+    body { font-family: Arial; padding: 20px; background: #f0f0f0; }
+    textarea, input { width: 100%; padding: 10px; margin-top: 10px; }
+    button { margin: 10px 5px 10px 0; padding: 10px 20px; }
+  </style>
+</head>
+
+<body>
+  <h2>Criptografia com Chave Simétrica (AES)</h2>
+  <textarea id="textoSim" placeholder="Digite o texto aqui..."></textarea>
+  <input id="chaveSim" placeholder="Digite a chave (ex: senha123)" />
+  <button onclick="criptografarSim()">Criptografar</button>
+  <button onclick="descriptografarSim()">Descriptografar</button>
+  <textarea id="saidaSim" readonly placeholder="Resultado..."></textarea>
+
+  <hr>
+
+  <h2>Criptografia com Chave Assimétrica (RSA)</h2>
+  <textarea id="textoRSA" placeholder="Digite o texto aqui..."></textarea>
+  <button onclick="gerarChavesRSA()">Gerar Chaves</button>
+  <button onclick="criptografarRSA()">Criptografar</button>
+  <button onclick="descriptografarRSA()">Descriptografar</button>
+  <textarea id="saidaRSA" readonly placeholder="Resultado..."></textarea>
+
+  <script src="script.js"></script>
+</body>
+</html>
